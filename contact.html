@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | Fin Trip</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f8fb;
+}
+
+/* NAVBAR */
+
+nav{
+    background:#0a2540;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ff6600;
+}
+
+/* HERO */
+
+.hero{
+    background:url("https://images.unsplash.com/photo-1521791136064-7986c2920216");
+    height:250px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:40px;
+    font-weight:bold;
+}
+
+/* SECTION */
+
+.section{
+    padding:40px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+/* FORM */
+
+.form-box{
+    background:white;
+    padding:25px;
+    width:350px;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.form-box h2{
+    color:#0a2540;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
+button{
+    background:#ff6600;
+    color:white;
+    border:none;
+    padding:12px;
+    width:100%;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#cc5200;
+}
+
+/* CONTACT INFO */
+
+.info-box{
+    background:white;
+    padding:25px;
+    width:350px;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.info-box h2{
+    color:#0a2540;
+}
+
+.info-box p{
+    margin:10px 0;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0a2540;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+
+</style>
+
+<script>
+
+function sendMessage(){
+
+alert("Thank you! Your message has been sent. Fin Trip team will contact you soon.");
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="destination.html">Destinations</a>
+<a href="facilities.html">Facilities</a>
+<a href="emergency.html">Emergency</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<div class="hero">
+Contact Fin Trip
+</div>
+
+
+<!-- CONTACT SECTION -->
+
+<section class="section">
+
+<!-- FORM -->
+
+<div class="form-box">
+
+<h2>Send Message</h2>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<input type="tel" placeholder="Your Phone" required>
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button onclick="sendMessage()">
+Send Message
+</button>
+
+</div>
+
+
+<!-- CONTACT INFO -->
+
+<div class="info-box">
+
+<h2>Contact Information</h2>
+
+<p><strong>Phone:</strong> +91 98765 43210</p>
+
+<p><strong>Email:</strong> fintriptravel@gmail.com</p>
+
+<p><strong>Location:</strong> India</p>
+
+<p><strong>Support:</strong> 24/7 Emergency Support Available</p>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Fin Trip | Travel Smarter, Not Harder
+
+</footer>
+
+</body>
+</html>
