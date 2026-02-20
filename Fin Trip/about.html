@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Travel Website</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    line-height:1.6;
+}
+
+/* Navbar */
+nav{
+    background:#0a3d62;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+}
+
+nav a:hover{
+    color:#f6b93b;
+}
+
+/* Video Hero */
+
+.hero{
+    position:relative;
+    height:400px;
+    overflow:hidden;
+}
+
+.hero video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    font-size:40px;
+    font-weight:bold;
+    text-shadow:2px 2px 5px black;
+}
+
+/* Container */
+
+.container{
+    padding:40px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.container h2{
+    color:#0a3d62;
+}
+
+/* Mission Vision */
+
+.cards{
+    display:flex;
+    gap:20px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    flex:1;
+    min-width:250px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+/* Team */
+
+.team{
+    margin-top:40px;
+}
+
+.team-members{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.member{
+    flex:1;
+    min-width:200px;
+    text-align:center;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.member img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+}
+
+/* Footer */
+
+footer{
+    background:#0a3d62;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="facilities.html">Facilities</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<!-- Video Hero -->
+
+<div class="hero">
+
+<video autoplay muted loop>
+<source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+</video>
+
+<div class="hero-text">
+About Our Travel Platform
+</div>
+
+</div>
+
+<!-- About Content -->
+
+<div class="container">
+
+<h2>Who We Are</h2>
+
+<p>
+We are on a mission to simplify the complex travel industry and create new solutions. Our platform connects airlines, hotels, and travelers through a single independent marketplace.
+</p>
+
+<p>
+We help travelers explore the world easily while helping travel businesses connect directly with customers through personalized services.
+</p>
+
+<!-- Mission Vision -->
+
+<div class="cards">
+
+<div class="card">
+<h3>Our Mission</h3>
+<p>
+To simplify travel booking and help people explore the world easily through technology and innovation.
+</p>
+</div>
+
+<div class="card">
+<h3>Our Vision</h3>
+<p>
+To become the world's most trusted travel platform connecting travelers and travel services globally.
+</p>
+</div>
+
+<div class="card">
+<h3>Our Values</h3>
+<p>
+Innovation, trust, customer satisfaction, and delivering exceptional travel experiences.
+</p>
+</div>
+
+</div>
+
+<!-- Team Section -->
+
+<div class="team">
+
+<h2>Meet Our Team</h2>
+
+<div class="team-members">
+
+<div class="member">
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<h3>Travel Manager</h3>
+<p>Expert in travel planning</p>
+</div>
+
+<div class="member">
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<h3>Booking Specialist</h3>
+<p>Handles hotel and flight bookings</p>
+</div>
+
+<div class="member">
+<img src="https://randomuser.me/api/portraits/men/65.jpg">
+<h3>Customer Support</h3>
+<p>24/7 traveler support</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Footer -->
+
+<footer>
+
+<h3>TRAVEL BROADENS THE MIND & OPENS THE DOOR TO NEW EXPERIENCES.</h3>
+
+</footer>
+
+</body>
+</html>

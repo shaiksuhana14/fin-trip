@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment | Fin Trip</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(to right,#ff0080,#ff8c00);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.payment-box{
+background:white;
+padding:30px;
+border-radius:12px;
+width:350px;
+box-shadow:0 0 15px rgba(0,0,0,0.3);
+text-align:center;
+}
+
+.payment-box h2{
+color:#ff0080;
+margin-bottom:20px;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+background:#ff0080;
+color:white;
+border:none;
+padding:12px;
+width:100%;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#cc0066;
+}
+
+.success{
+display:none;
+color:green;
+margin-top:15px;
+font-weight:bold;
+}
+
+</style>
+
+<script>
+
+function makePayment(){
+
+document.getElementById("successMsg").style.display="block";
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="payment-box">
+
+<h2>Fin Trip Payment</h2>
+
+<input type="text" placeholder="Card Holder Name">
+
+<input type="text" placeholder="Card Number">
+
+<input type="text" placeholder="Expiry Date (MM/YY)">
+
+<input type="text" placeholder="CVV">
+
+<button onclick="makePayment()">Pay Now</button>
+
+<div class="success" id="successMsg">
+Payment Successful! ✅
+</div>
+
+</div>
+
+</body>
+</html>
