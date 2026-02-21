@@ -21,6 +21,9 @@ nav{
     background:#0a2540;
     padding:15px;
     text-align:center;
+    display: flex;       
+    align-items: center;
+    justify-content: flex-start;
 }
 
 nav a{
@@ -29,8 +32,15 @@ nav a{
     margin:20px;
     font-size:18px;
     font-weight:bold;
+    
 }
-
+.logo{
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right:auto;
+}
 nav a:hover{
     color:#ff6600;
 }
@@ -155,7 +165,11 @@ alert("Calling Fin Trip Emergency Support... 📞");
 
 <!-- NAVBAR -->
 
-<nav>
+<nav class="navbar">
+    
+<img src="public/img.jpeg" alt="Fin Trip Logo" width="120">
+
+<div class="logo">Fin Trip</div>
 
 <a href="index.html">Home</a>
 <a href="destination.html">Destinations</a>

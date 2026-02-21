@@ -18,10 +18,13 @@ body{
 
 nav{
     background:#0a2540;
+    
     padding:15px;
     text-align:center;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
 nav a{
     color:white;
     text-decoration:none;
@@ -29,6 +32,13 @@ nav a{
     font-size:18px;
     font-weight:bold;
 }
+
+.logo{
+            font-size:34px;
+            font-weight:bold;
+            font-family: Arial, Helvetica, sans-serif, sans-serif;
+            margin-right: auto;
+        }
 
 nav a:hover{
     color:#ff6600;
@@ -130,13 +140,17 @@ footer{
 <!-- NAVBAR -->
 
 <nav>
+  <img src="public/img.jpeg" alt="Fin Trip Logo" width="120">
 
+    <div class="logo">Fin Trip</div>
+   
 <a href="index.html">Home</a>
 <a href="destination.html">Destinations</a>
-<a href="facilities.html">Facilities</a>
- <a href="emergency.html">Emergency</a>
+ <a href="facilities.html">Facilities</a>
+<a href="emergency.html">Emergency</a>
  <a href="about.html">About</a>
  <a href="contact.html">Contact</a>
+    </div>
 
 </nav>
 

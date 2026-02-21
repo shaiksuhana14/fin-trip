@@ -13,18 +13,56 @@ body{
 }
 
 /* Navbar */
-nav{
-    background: linear-gradient(90deg,#0a2540);
-    padding:15px;
-    text-align:center;
+/* Updated Navbar CSS */
+nav {
+    background: #0a2540;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* This makes it responsive */
 }
 
-nav a{
-    color:white;
-    margin:15px;
-    text-decoration:none;
-    font-size:18px;
-    font-weight:bold;
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right:auto;
+}
+
+.menu a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #ff6600;
+}
+
+/* Mobile Responsive Fix */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .menu {
+        margin-top: 15px;
+    }
+    .menu a {
+        margin: 5px 10px;
+        display: inline-block;
+    }
 }
 
 /* Hero */
@@ -101,12 +139,23 @@ footer{
     text-align:center;
     margin-top:30px;
 }
+
 </style>
 
 </head>
 <body>
 
+
 <nav>
+        
+    <img src="public/img.jpeg" alt="Fin Trip Logo" width="120">
+
+    <div class="logo">Fin Trip</div>
+    
+
+
+
+<div class="menu">
 <a href="index.html">Home</a>
 <a href="destination.html">Destinations</a>
 <a href="facilities.html">Facilities</a>
