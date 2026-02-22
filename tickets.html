@@ -9,13 +9,129 @@ body{
 margin:0;
 font-family:Arial;
 background:#fff5f8;
+text-align: center;
 }
 
+.tickets-section{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:40px 20px;
+}
+
+.ticket-card{
+width:300px;
+background:#fff;
+padding:20px;
+margin:20px 0;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+
+
+
+
 /* Navbar */
-nav{
-background:#0a3d62;
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial, sans-serif;
+}
+
+header{
+  background:#0a2540;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img{
+  width:60px;
+  height:60px;
+  border-radius:5px;
+}
+
+.logo h1{
+  font-size:28px;
+  color:white;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#ff6600;
+}
+
+/* ===== MOBILE MENU ===== */
+
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+  nav ul{
+    position:absolute;
+    top:90px;
+    right:0;
+    background:#0a2540;
+    flex-direction:column;
+    width:220px;
+    padding:20px;
+    display:none;
+  }
+
+  nav ul.active{
+    display:flex;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+}
+
+ nav{
+background: #0a2540;
 padding:15px;
 text-align:center;
+text-align:center;
+ display: flex;       
+ align-items: center;
+ justify-content: flex-start;
 }
 
 nav a{
@@ -24,6 +140,27 @@ text-decoration:none;
 margin:15px;
 font-weight:bold;
 }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    font-size:18px;
+    font-weight:bold;
+
+}
+.logo {
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: auto;
+}
+.menu a:hover {
+    color: #ff6600;
+}
+
+;
+       
 
 /* Section */
 .section{
@@ -81,100 +218,131 @@ footer{
 </head>
 
 <body>
+<script>
+function toggleMenu(){
+  document.getElementById("nav-links").classList.toggle("active");
+}
+</script>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="destination.html">Destinations</a>
-<a href="facilities.html">Facilities</a>
-<a href="emergency.html">Emergency</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</nav>
+    <!-- NAVBAR -->
 
-<section class="section">
+       <header>
+    
+       <img src="public/img.jpeg" alt="Fin Trip Logo" width="120">
 
-<h1>Disneyland Dubai Tickets</h1>
-<p>Choose your magical experience</p>
-
-<div class="container">
-
-<div class="card">
-<h3>Standard Ticket</h3>
-<p>Access to all rides</p>
-<div class="price">₹5000</div>
-<button onclick="location.href='payment.html'">Book Now</button>
-</div>
-
-<div class="card">
-<h3>Premium Ticket</h3>
-<p>Fast track rides</p>
-<div class="price">₹9000</div>
-<button onclick="location.href='payment.html'">Book Now</button>
-</div>
-
-<div class="card">
-<h3>VIP Ticket</h3>
-<p>All access + VIP seating</p>
-<div class="price">₹15000</div>
-<button onclick="location.href='payment.html'">Book Now</button>
-</div>
+       <div class="logo">Fin Trip</div>
+       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
 
-</div>
+        <nav>
+      <ul id="nav-links">
+       <li><a href="index.html">Home</a></li>
+       <li><a href="destination.html">Destinations</a></li>
+       <li><a href="tickets.html">Tickets</a></li>
+       <li><a href="facilities.html">Facilities</a></li>
+       <li><a href="emergency.html">Emergency</a></li>
+       <li><a href="about.html">About</a></li>
+       <li><a href="contact.html">Contact</a></li>
+       </ul>
+     </nav>
+       </header>
 
-<h2>Switzerland Tickets</h2>
-<p>Choose your magical experience</p>
+       <section class="ticket-section">
 
-<div class="container">
+       <h1>Disneyland Dubai Tickets</h1>
+       <p>Choose your magical experience</p>
 
-<div class="card">
-<h1>Standard Ticket</h1>
-<p>Access to all rides</p>
-<div class="price">₹5000</div>
-<button onclick="location.href='payment.html'">Book Now</button>
-</div>
+       <div class="container">
 
-<div class="card">
-<h3>Premium Ticket</h3>
-<p>Fast track rides</p>
-<div class="price">₹9000</div>
-<button onclick="location.href='payment.html'">Book Now</button>
-</div>
+       <div class="ticket-card">
+       <h3>Standard Ticket</h3>
+       <p>Access to all rides</p>
+       <div class="price">₹5000</div>
+       <button onclick="location.href='payment.html'">Book Now</button>
+       </div>
 
-<div class="card">
-<h3>VIP Ticket</h3>
-<p>All access + VIP seating</p>
-<div class="price">₹15000</div>
-<button onclick="location.href='payment.html'">Book Now</button>
-</div>
+       <div class="ticket-card">
+       <h3>Premium Ticket</h3>
+       <p>Fast track rides</p>
+       <div class="price">₹9000</div>
+       <button onclick="location.href='payment.html'">Book Now</button>
+       </div>
 
-<h1>Maldives Tickets</h1>
-<p>Choose your magical experience</p>
+       <div class="ticket-card">
+       <h3>VIP Ticket</h3>
+       <p>All access + VIP seating</p>
+       <div class="price">₹15000</div>
+       <button onclick="location.href='payment.html'">Book Now</button>
+       </div>
 
-<div class="container">
 
-<div class="card">
-<h3>Standard Ticket</h3>
-<p>Access to all rides</p>
-<div class="price">₹5000</div>
-<button onclick="location.href='payment.html'">Book Now</button>
-</div>
+       </div>
 
-<div class="card">
-<h3>Premium Ticket</h3>
-<p>Fast track rides</p>
-<div class="price">₹9000</div>
-<button onclick="location.href='payment.html'">Book Now</button>
-</div>
+    
 
-<div class="card">
-<h3>VIP Ticket</h3>
-<p>All access + VIP seating</p>
-<div class="price">₹15000</div>
-<button onclick="location.href='payment.html'">Book Now</button>
-</div>
+                       <h2>Switzerland Tickets</h2>
+                       <p>Choose your magical experience</p>
+                       <div class="container">
 
-<footer>
+
+       <div class=" ticket-card">
+       <h3>Standard Ticket</h3>
+       <p>Access to all rides</p>
+       <div class="price">₹5000</div>
+       <button onclick="location.href='payment.html'">Book Now</button>
+       </div>
+
+       <div class="ticket-card">
+       <h3>Premium Ticket</h3>
+       <p>Fast track rides</p>
+       <div class="price">₹9000</div>
+       <button onclick="location.href='payment.html'">Book Now</button>
+       </div>
+
+       <div class="ticket-card">
+       <h3>VIP Ticket</h3>
+       <p>All access + VIP seating</p>
+       <div class="price">₹15000</div>
+       <button onclick="location.href='payment.html'">Book Now</button>
+       </div>
+
+         </div>
+       
+       <h3>Maldives Tickets</h3>
+       <p>Choose your magical experience</p>
+
+       <div class="container">
+
+       <div class="ticket-card">
+       <h3>Standard Ticket</h3>
+       <p>Access to all rides</p>
+       <div class="price">₹5000</div>
+       <button onclick="location.href='payment.html'">Book Now</button>
+       </div>
+
+       <div class="ticket-card">
+       <h3>Premium Ticket</h3>
+       <p>Fast track rides</p>
+       <div class="price">₹9000</div>
+       <button onclick="location.href='payment.html'">Book Now</button>
+       </div>
+
+       <div class="ticket-card">
+       <h3>VIP Ticket</h3>
+       <p>All access + VIP seating</p>
+       <div class="price">₹15000</div>
+       <button onclick="location.href='payment.html'">Book Now</button>
+       </div>
+
+
+
+
+      
+
+    
+
+    
+    <footer>
     Welcome to our world of wanderlust & exploration! At our premier trip agency, we're dedicated to crafting unforgettable 
 travel experiences tailored just for you.
 </footer>

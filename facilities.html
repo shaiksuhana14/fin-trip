@@ -1,298 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities | Fin Trip</title>
+    <style>
 
-<title>Facilities | Fin Trip</title>
+      body{
+         margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom,#ffe6f0,#fff);
+      }
+     
 
-<style>
+         /* NAVBAR */
+
+          *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f4f8fb;
+  font-family:Arial, sans-serif;
 }
 
-/* NAVBAR */
+header{
+  background:#0a2540;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
 
-nav{
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img{
+  width:60px;
+  height:60px;
+  border-radius:5px;
+}
+
+.logo h1{
+  font-size:28px;
+  color:white;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#ff6600;
+}
+     /* ===== MOBILE MENU ===== */
+
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+  nav ul{
+    position:absolute;
+    top:90px;
+    right:0;
     background:#0a2540;
-    
-    padding:15px;
-    text-align:center;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-}
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:20px;
-    font-size:18px;
-    font-weight:bold;
-}
+    flex-direction:column;
+    width:220px;
+    padding:20px;
+    display:none;
+  }
 
-.logo {
+  nav ul.active{
+    display:flex;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+}
+nav{
+            background:#0a2540;
+            padding:15px;
+            display:flex;
+           text-align:center;
+           justify-content: flex-start;
+
+        }
+
+     .logo {
     color: white;
     font-size: 34px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     margin-right: auto;
 }
-nav a:hover{
-    color:#ff6600;
-}
 
-/* HERO */
 
-.hero{
-    background:url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05");
-    height:300px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:white;
-    font-size:40px;
-    font-weight:bold;
-}
+        nav a{
+            color:white;
+            text-decoration: none;
+            margin:20px;
+            font-size:18px;
+            font-weight:bold;
+        }
 
-/* SECTION */
+        nav a:hover{
+            color:#ff6600;
+        }
+                
+    
+        
 
-.section{
-    padding:40px;
-    text-align:center;
-}
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05");
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+        }
 
-.section h1{
-    color:#0a2540;
-}
+        /* CONTENT SECTIONS */
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
 
-/* CARDS */
+        .section h1 {
+            color: #0a2540;
+            margin-bottom: 20px;
+        }
 
-.container{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:25px;
-    margin-top:30px;
-}
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
 
-.card{
-    width:300px;
-    background:white;
-    border-radius:12px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.2);
-    overflow:hidden;
-    transition:0.3s;
-}
+        .card {
+            width: 300px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: 0.3s;
+        }
 
-.card:hover{
-    transform:scale(1.05);
-}
+        .card:hover {
+            transform: translateY(-5px);
+        }
 
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-}
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
 
-.card h3{
-    padding:10px;
-    color:#ff6600;
-}
+        .card h3 {
+            padding: 15px 10px 5px;
+            color: #ff6600;
+        }
 
-.card p{
-    padding:0 15px 15px;
-    color:#555;
-}
+        .card p {
+            padding: 0 15px 15px;
+            color: #555;
+            font-size: 14px;
+        }
 
-button{
-    background:#ff6600;
-    color:white;
-    border:none;
-    padding:10px 20px;
-    border-radius:6px;
-    margin-bottom:20px;
-    cursor:pointer;
-}
+        button {
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
 
-button:hover{
-    background:#cc5200;
-}
+        button:hover {
+            background: #cc5200;
+        }
 
-/* FOOTER */
-
-footer{
-    background:#0a2540;
-    color:white;
-    padding:15px;
-    text-align:center;
-    margin-top:30px;
-}
-
-</style>
-
+        footer {
+            background: #0a2540;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
+      <body>
+        <script>
+        function toggleMenu(){
+       document.getElementById("nav-links").classList.toggle("active");
+      }
+</script>
+     
+     <!-- NAVBAR -->
 
-<body>
 
-<!-- NAVBAR -->
-
-<nav>
-  <img src="public/img.jpeg" alt="Fin Trip Logo" width="120">
+     <header>
+     
+    <img src="public/img.jpeg" alt="Fin Trip Logo" width="120">
 
     <div class="logo">Fin Trip</div>
-   
-<a href="index.html">Home</a>
-<a href="destination.html">Destinations</a>
- <a href="facilities.html">Facilities</a>
-<a href="emergency.html">Emergency</a>
- <a href="about.html">About</a>
- <a href="contact.html">Contact</a>
-    </div>
+  
 
-</nav>
+     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-
-<!-- HERO -->
+    <nav>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destination.html">Destinations</a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+            <li><a href="emergency.html">Emergency</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
 <div class="hero">
-Our Travel Facilities
-
+    Our Travel Facilities
 </div>
+
 <section class="section">
-
-<h1>Book Travel and Stay Services Easily</h1>
-
-<div class="container">
-
-
-<!-- HOTEL -->
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
-
-<h3>Hotel Booking</h3>
-
-<p>
-"Find luxury and affordable hotels for your perfect stay."
-</p>
-
-<button onclick="location.href='payment.html'">
-Book Hotel
-</button>
-
-</div>
-
-
-<!-- FLIGHT -->
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05">
-
-<h3>Flight Booking</h3>
-
-<p>
-"Book domestic and international flights at best prices."
-</p>
-
-<button onclick="location.href='payment.html'">
-Book Flight
-</button>
-
-</div>
-
-
-<!-- CAR -->
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
-
-<h3>Car Service</h3>
-
-<p>
-"Instant car service at your location for safe travel."
-</p>
-
-<button onclick="location.href='payment.html'">
-Book Car
-</button>
-
-</div>
-
-
-<!-- BUS -->
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957">
-
-<h3>Bus Service</h3>
-
-<p>
-"Affordable and comfortable bus travel across cities."
-</p>
-
-<button onclick="location.href='payment.html'">
-Book Bus
-</button>
-
-</div>
-
-
-<!-- TRAIN -->
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3">
-
-<h3>Train Service</h3>
-
-<p>
-"Enjoy fast and scenic train journeys with easy booking."
-</p>
-
-<button onclick="location.href='payment.html'">
-Book Train
-</button>
-
-</div>
-
-
-<!-- SHIP -->
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21">
-
-<h3>Ship Service</h3>
-
-<p>
-"Experience luxury cruise and ship travel with comfort."
-</p>
-
-<button onclick="location.href='payment.html'">
-Book Ship
-</button>
-
-</div>
-
-
-</div>
-
+    <h1>Book Travel and Stay Services Easily</h1>
+    <div class="container">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+            <h3>Hotel Booking</h3>
+            <p>"Find luxury and affordable hotels for your perfect stay."</p>
+            <button onclick="location.href='payment.html'">Book Hotel</button>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05">
+            <h3>Flight Booking</h3>
+            <p>"Book domestic and international flights at best prices."</p>
+            <button onclick="location.href='payment.html'">Book Flight</button>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+            <h3>Car Service</h3>
+            <p>"Instant car service at your location for safe travel."</p>
+            <button onclick="location.href='payment.html'">Book Car</button>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957">
+            <h3>Bus Service</h3>
+            <p>"Affordable and comfortable bus travel across cities."</p>
+            <button onclick="location.href='payment.html'">Book Bus</button>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3">
+            <h3>Train Service</h3>
+            <p>"Enjoy fast and scenic train journeys with easy booking."</p>
+            <button onclick="location.href='payment.html'">Book Train</button>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21">
+            <h3>Ship Service</h3>
+            <p>"Experience luxury cruise and ship travel with comfort."</p>
+            <button onclick="location.href='payment.html'">Book Ship</button>
+        </div>
+    </div>
 </section>
 
-
 <footer>
-
-© 2026 Fin Trip | Travel Smarter, Not Harder
-
+    © 2026 Fin Trip | Travel Smarter, Not Harder
 </footer>
 
+<script>
+    function toggleMenu(){
+        document.getElementById("nav-links").classList.toggle("active");
+    }
+</script>
 
 </body>
 </html>

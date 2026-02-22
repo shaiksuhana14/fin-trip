@@ -17,23 +17,96 @@ body{
 
 /* NAVBAR */
 
-nav{
-    background:#0a2540;
-    padding:15px;
-    text-align:center;
-    display: flex;       
-    align-items: center;
-    justify-content: flex-start;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:20px;
-    font-size:18px;
-    font-weight:bold;
-    
+body{
+  font-family:Arial, sans-serif;
 }
+
+header{
+  background:#0a2540;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img{
+  width:60px;
+  height:60px;
+  border-radius:5px;
+}
+
+.logo h1{
+  font-size:28px;
+  color:white;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#ff6600;
+}
+
+/* ===== MOBILE MENU ===== */
+
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+  nav ul{
+    position:absolute;
+    top:90px;
+    right:0;
+    background:#0a2540;
+    flex-direction:column;
+    width:220px;
+    padding:20px;
+    display:none;
+  }
+
+  nav ul.active{
+    display:flex;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+}
+
+
+
 .logo {
     color: white;
     font-size: 34px;
@@ -44,6 +117,8 @@ nav a{
 nav a:hover{
     color:#ff6600;
 }
+
+
 
 /* SECTION */
 
@@ -110,6 +185,8 @@ footer{
 </style>
 
 <script>
+  
+  
 
 let map;
 
@@ -159,26 +236,40 @@ alert("Calling Fin Trip Emergency Support... 📞");
 
 </script>
 
-</head>
+</header>
 
 <body>
+   <script>
+function toggleMenu(){
+  document.getElementById("nav-links").classList.toggle("active");
+}
+</script>
 
 <!-- NAVBAR -->
+ <header>
 
-<nav class="navbar">
     
 <img src="public/img.jpeg" alt="Fin Trip Logo" width="120">
 
 <div class="logo">Fin Trip</div>
 
-<a href="index.html">Home</a>
-<a href="destination.html">Destinations</a>
-<a href="facilities.html">Facilities</a>
-<a href="emergency.html">Emergency</a>
-<a href="contact.html">Contact</a>
-<a href="about.html">About</a>
-<a href="tickets.html">Tickets</a>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="destination.html">Destinations</a></li>
+    <li><a href="tickets.html">Tickets</a></li>
+    <li><a href="facilities.html">Facilities</a></li>
+    <li><a href="emergency.html">Emergency</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </nav>
+
+</header>
+ 
+
 
 
 <!-- SECTION -->
