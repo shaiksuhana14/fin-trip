@@ -1,103 +1,252 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Payment | Fin Trip</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | Fin Trip</title>
+    <style>
+        /* 1. Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background:linear-gradient(to right,#ff0080,#ff8c00);
+            display: flex;
+            flex-direction: column; /* Stack header on top of content */
+            min-height: 100vh;
+        }
+
+         
+
+                /* NAVBAR */
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
-margin:0;
-font-family:Arial;
-background:linear-gradient(to right,#ff0080,#ff8c00);
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
+  font-family:Arial, sans-serif;
 }
 
-.payment-box{
-background:white;
-padding:30px;
-border-radius:12px;
-width:350px;
-box-shadow:0 0 15px rgba(0,0,0,0.3);
-text-align:center;
+header{
+  background:#0a2540;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-.payment-box h2{
-color:#ff0080;
-margin-bottom:20px;
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
 
-input{
-width:100%;
-padding:10px;
-margin:10px 0;
-border-radius:6px;
-border:1px solid #ccc;
+.logo img{
+  width:60px;
+  height:60px;
+  border-radius:5px;
 }
 
-button{
-background:#ff0080;
-color:white;
-border:none;
-padding:12px;
-width:100%;
-border-radius:6px;
-font-size:16px;
-cursor:pointer;
+.logo h1{
+  font-size:28px;
+  color:white;
 }
 
-button:hover{
-background:#cc0066;
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:25px;
 }
 
-.success{
-display:none;
-color:green;
-margin-top:15px;
-font-weight:bold;
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+  transition:0.3s;
 }
 
-</style>
-<script>
+nav ul li a:hover{
+  color:#ff6600;
+}
+
+/* ===== MOBILE MENU ===== */
+
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+  nav ul{
+    position:absolute;
+    top:90px;
+    right:0;
+    background:#0a2540;
+    flex-direction:column;
+    width:220px;
+    padding:20px;
+    display:none;
+  }
+
+  nav ul.active{
+    display:flex;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+}
+        
+        .logo {
+         color: white;
+         font-size: 34px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+         margin-right: auto;
+        }
+
+        .menu a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+            font-size:16px;
+        }
+         .menu a:hover {
+          color: #ff6600;
+}
+
+        /* 3. Payment Section Container */
+        .payment-wrapper {
+            flex-grow: 1; /* Fills remaining space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .payment-box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .payment-box h2 {
+            color: #0a2540;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 14px;
+            width: 100%;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #e65c00;
+        }
+
+        .success {
+            display: none;
+            color: green;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        
+    </style>
+</head>
+<body>
+     
+    <script>
 function toggleMenu(){
   document.getElementById("nav-links").classList.toggle("active");
 }
 </script>
+
+<!-- NAVBAR -->
+<header>
+
+<img src="public/img.jpeg" alt="Fin Trip Logo" width="120">
+
+    <div class="logo">Fin Trip</div>
+  
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="destination.html">Destinations</a></li>
+    <li><a href="tickets.html">Tickets</a></li>
+    <li><a href="facilities.html">Facilities</a></li>
+    <li><a href="emergency.html">Emergency</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="payment.html">Payment</a></li>
+  </ul>
+</nav>
+
+</header>
+    <nav>
+
+<div class="payment-wrapper">
+    <div class="payment-box">
+        <h2>Fin Trip Payment</h2>
+        <input type="text" placeholder="Card Holder Name">
+        <input type="text" placeholder="Card Number">
+        <input type="text" placeholder="Expiry Date (MM/YY)">
+        <input type="text" placeholder="CVV">
+        <button onclick="makePayment()">Pay Now</button>
+        <div class="success" id="successMsg">Payment Successful! ✅</div>
+    </div>
+</div>
+
 <script>
+    function toggleMenu() {
+        document.getElementById("nav-links").classList.toggle("active");
+    }
 
-function makePayment(){
-
-document.getElementById("successMsg").style.display="block";
-
-}
-
+    function makePayment() {
+        document.getElementById("successMsg").style.display = "block";
+    }
 </script>
-
-</head>
-
-<body>
-
-<div class="payment-box">
-
-<h2>Fin Trip Payment</h2>
-
-<input type="text" placeholder="Card Holder Name">
-
-<input type="text" placeholder="Card Number">
-
-<input type="text" placeholder="Expiry Date (MM/YY)">
-
-<input type="text" placeholder="CVV">
-
-<button onclick="makePayment()">Pay Now</button>
-
-<div class="success" id="successMsg">
-Payment Successful! ✅
-</div>
-
-</div>
 
 </body>
 </html>
